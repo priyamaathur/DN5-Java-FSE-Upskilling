@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 7 - Video</title>
+</head>
+<body>
+
+    <h2>Event Promo Video</h2>
+
+    <video width="400" controls
+           oncanplay="document.getElementById('msg').textContent='Video ready to play!'"
+           onbeforeunload="return 'Are you sure you want to leave?'"
+           src="https://www.w3schools.com/html/mov_bbb.mp4">
+        Your browser does not support video.
+    </video>
+
+    <p id="msg"></p>
+
+</body>
+</html>

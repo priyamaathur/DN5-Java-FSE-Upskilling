@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 6 - Event Handling</title>
+</head>
+<body>
+
+    <h2>Event Feedback</h2>
+
+    <!-- onblur -->
+    <label>Phone:</label>
+    <input type="text" onblur="alert('Phone field lost focus!')" placeholder="Enter phone"><br><br>
+
+    <!-- onchange -->
+    <label>Select Event:</label>
+    <select onchange="alert('You selected: ' + this.value)">
+        <option value="">-- Select --</option>
+        <option value="Tech Meetup">Tech Meetup</option>
+        <option value="Music Festival">Music Festival</option>
+    </select><br><br>
+
+    <!-- onclick -->
+    <button onclick="alert('Feedback Submitted!')">Submit</button><br><br>
+
+    <!-- ondblclick -->
+    <img src="https://picsum.photos/200/150" alt="Event"
+         ondblclick="this.style.width='400px'" style="width:200px;"><br>
+    <small>Double click to enlarge</small><br><br>
+
+    <!-- onkeyup character count -->
+    <label>Feedback:</label><br>
+    <textarea onkeyup="document.getElementById('count').textContent=this.value.length+' chars'"></textarea>
+    <p id="count">0 chars</p>
+
+</body>
+</html>

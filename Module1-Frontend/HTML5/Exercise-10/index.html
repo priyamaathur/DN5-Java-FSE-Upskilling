@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 10 - DevTools Debugging</title>
+</head>
+<body>
+
+    <h2>Debugging with Chrome DevTools</h2>
+
+    <p id="testPara">Inspect this element using Chrome DevTools.</p>
+
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="logMessage()">Log to Console</button>
+
+    <script>
+        // Use Console tab in DevTools to see this log
+        console.log('Page loaded successfully');
+        console.log('DOM ready');
+
+        function changeStyle() {
+            // Inspect this in DevTools Elements tab
+            document.getElementById('testPara').style.color = 'red';
+            console.log('Style changed to red');
+        }
+
+        function logMessage() {
+            // Add breakpoint here in DevTools Sources tab
+            let x = 10;
+            let y = 20;
+            console.log('x =', x, '| y =', y, '| sum =', x + y);
+        }
+    </script>
+
+</body>
+</html>

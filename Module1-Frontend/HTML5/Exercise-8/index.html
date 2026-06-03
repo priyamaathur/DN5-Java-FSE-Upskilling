@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 8 - Web Storage</title>
+</head>
+<body>
+
+    <h2>Save Event Preference</h2>
+
+    <label>Select Event Type:</label>
+    <select id="eventType" onchange="localStorage.setItem('eventType', this.value); alert('Saved!')">
+        <option value="">-- Select --</option>
+        <option value="tech">Tech Meetup</option>
+        <option value="music">Music Festival</option>
+        <option value="food">Food Fair</option>
+    </select><br><br>
+
+    <button onclick="localStorage.clear(); sessionStorage.clear(); alert('Cleared!')">
+        Clear Preferences
+    </button>
+
+    <script>
+        // Retrieve on load and pre-select
+        const saved = localStorage.getItem('eventType');
+        if (saved) document.getElementById('eventType').value = saved;
+    </script>
+
+</body>
+</html>
