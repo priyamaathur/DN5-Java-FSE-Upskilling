@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Desktop - nav horizontal */
+.navbar {
+    display: flex;
+    gap: 20px;
+    background: #003366;
+    padding: 12px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 32px;
+    color: #003366;
+}
+
+.intro {
+    font-size: 16px;
+}
+
+/* Tablet and Mobile - below 768px */
+@media (max-width: 768px) {
+
+    /* Stack nav links vertically */
+    .navbar {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Reduce font sizes */
+    h1 {
+        font-size: 22px;
+    }
+
+    .intro {
+        font-size: 14px;
+    }
+
+    /* Flexible image */
+    .banner-img {
+        width: 100%;
+    }
+}

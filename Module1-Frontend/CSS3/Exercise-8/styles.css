@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Box model - border, padding, margin */
+.eventCard {
+    border: 2px solid #003366;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: #e8f0fe;
+}
+
+/* Outline on form inputs */
+.form-input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    outline: 3px solid #0055aa;
+    width: 250px;
+}
+
+/* visibility hidden - element invisible but still takes space */
+.visible-hidden {
+    visibility: hidden;
+}
+
+/* display none - element removed from layout completely */
+.display-none {
+    display: none;
+}

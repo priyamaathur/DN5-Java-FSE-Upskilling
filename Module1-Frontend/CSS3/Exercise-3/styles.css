@@ -1,0 +1,33 @@
+/* Universal selector - reset margin padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element selector - all h2 */
+h2 {
+    color: #0055aa;
+    margin: 15px 0;
+}
+
+/* ID selector - banner */
+#mainHeader {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+}
+
+/* Class selector - event cards */
+.eventCard {
+    background: #e8f0fe;
+    padding: 10px;
+    margin: 8px 0;
+    border-left: 4px solid #003366;
+}
+
+/* Grouping selector - h3 and p together */
+h3, p {
+    color: #444;
+    margin: 10px 0;
+}

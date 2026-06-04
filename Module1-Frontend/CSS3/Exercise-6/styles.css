@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Nav menu - remove bullets */
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background: #003366;
+}
+
+.nav-menu li {
+    padding: 10px 15px;
+}
+
+/* Link pseudo-classes */
+.nav-menu a:link    { color: white; text-decoration: none; }
+.nav-menu a:visited { color: #cccccc; }
+.nav-menu a:hover   { color: #ffcc00; text-decoration: underline; }
+.nav-menu a:active  { color: #ff6600; }
+
+/* Event list */
+.event-list {
+    list-style-type: square;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.event-list li {
+    padding: 8px 0;
+    margin: 4px 0;
+    color: #333;
+}
+
+/* Portal links */
+.portal-link:link    { color: #0055aa; }
+.portal-link:visited { color: #7700aa; }
+.portal-link:hover   { color: #cc0000; text-decoration: none; }
+.portal-link:active  { color: #ff6600; }

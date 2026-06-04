@@ -1,0 +1,38 @@
+/* Google Font applied */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    color: #003366;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #0055aa;
+}
+
+/* Description paragraph */
+.description {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #444;
+    letter-spacing: 0.5px;
+}
+
+/* Highlight paragraph */
+.highlight {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #cc0000;
+}

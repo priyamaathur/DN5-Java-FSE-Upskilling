@@ -1,0 +1,16 @@
+/* Header styles */
+h2 {
+    color: #003366;
+}
+
+/* Intro paragraph */
+.intro {
+    font-size: 16px;
+    color: #333;
+}
+
+/* CTA styles */
+.cta {
+    font-weight: bold;
+    color: #0055aa;
+}

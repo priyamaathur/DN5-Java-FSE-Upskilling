@@ -1,0 +1,31 @@
+/* Body with background image and fallback color */
+body {
+    background-color: #f0f4f8;
+    background-image: url('https://picsum.photos/seed/bg/1200/800');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* HEX color */
+h1 {
+    color: #003366;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Gradient on section header */
+.hero {
+    background: linear-gradient(to right, #003366, #0055aa);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+/* RGBA color */
+.info {
+    background-color: rgba(0, 85, 170, 0.1);
+    padding: 20px;
+    color: #333;
+}
