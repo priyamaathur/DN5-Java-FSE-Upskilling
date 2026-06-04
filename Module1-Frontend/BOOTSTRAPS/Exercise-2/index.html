@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Structure</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Bootstrap Directory Structure</h2>
+        <ul>
+            <li><strong>css/</strong> — bootstrap.min.css (styles)</li>
+            <li><strong>js/</strong> — bootstrap.bundle.min.js (plugins + popper)</li>
+            <li><strong>icons/</strong> — Bootstrap Icons library</li>
+        </ul>
+
+        <h4 class="mt-4">JS Plugin Demo — Tooltip</h4>
+        <button class="btn btn-secondary"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="This is a Bootstrap tooltip!">
+            Hover Me
+        </button>
+    </div>
+
+    <!-- bootstrap.bundle.min.js includes Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize tooltips
+        const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltips.forEach(el => new bootstrap.Tooltip(el));
+    </script>
+</body>
+</html>

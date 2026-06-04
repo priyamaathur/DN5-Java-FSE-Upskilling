@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Customization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+
+        /* Simulating custom primary color */
+        .btn-custom {
+            background-color: #003366;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 25px;
+        }
+        .card-custom {
+            border-radius: 10px;
+            border: 2px solid #003366;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Sass Customization Demo</h2>
+        <p>Custom primary color: <strong>#003366</strong> | Border radius: <strong>10px</strong></p>
+
+        <button class="btn-custom mb-4">Custom Button</button>
+
+        <div class="card card-custom p-3">
+            <h5>Custom Styled Card</h5>
+            <p>This card uses overridden Bootstrap variables via Sass.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
