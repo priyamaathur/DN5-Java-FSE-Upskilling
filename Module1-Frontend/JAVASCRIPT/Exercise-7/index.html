@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+
+    <h2>DOM Manipulation</h2>
+    <div id="eventContainer"></div>
+    <p id="status"></p>
+
+    <script>
+        const events = [
+            { name: "Tech Meetup", city: "New York" },
+            { name: "AI Conference", city: "Chicago" },
+            { name: "Frontend Bootcamp", city: "Los Angeles" }
+        ];
+
+        const container = document.querySelector('#eventContainer');
+
+
+        events.forEach(function(event) {
+            const card = document.createElement('div');
+            card.style.border = "1px solid #003366";
+            card.style.padding = "10px";
+            card.style.margin = "8px 0";
+
+            card.innerHTML = `<b>${event.name}</b> - ${event.city}
+                <button onclick="register(this, '${event.name}')">Register</button>`;
+
+            container.appendChild(card);
+        });
+
+  
+        function register(btn, name) {
+            btn.textContent = "Registered!";
+            btn.disabled = true;
+            document.getElementById('status').textContent =
+                "You registered for: " + name;
+        }
+    </script>
+
+</body>
+</html>

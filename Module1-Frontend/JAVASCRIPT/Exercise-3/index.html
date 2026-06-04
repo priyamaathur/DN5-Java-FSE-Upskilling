@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3 - Conditionals and Loops</title>
+</head>
+<body>
+
+    <h2>Exercise 3 - Conditionals, Loops, Error Handling</h2>
+    <div id="output"></div>
+
+    <script>
+        const events = [
+            { name: "Tech Meetup", date: "2025-06-10", seats: 10, status: "upcoming" },
+            { name: "AI Conference", date: "2024-05-15", seats: 0, status: "completed" },
+            { name: "Frontend Bootcamp", date: "2025-07-01", seats: 5, status: "upcoming" }
+        ];
+
+        let html = "";
+
+        events.forEach(function(event) {
+
+            if (event.status === "upcoming" && event.seats > 0) {
+                html += `<p>${event.name} - Seats: ${event.seats}</p>`;
+            }
+        });
+
+        document.getElementById('output').innerHTML = html;
+
+
+        try {
+            let selectedEvent = events[1]; // AI Conference - completed
+            if (selectedEvent.seats === 0) {
+                throw new Error("No seats available for " + selectedEvent.name);
+            }
+        } catch (e) {
+            console.log("Error: " + e.message);
+        }
+    </script>
+
+</body>
+</html>

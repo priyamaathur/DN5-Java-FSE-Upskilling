@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects and Prototypes</title>
+</head>
+<body>
+
+    <h2>Exercise 5 - Objects and Prototypes</h2>
+    <div id="output"></div>
+
+    <script>
+   
+        function Event(name, city, seats) {
+            this.name = name;
+            this.city = city;
+            this.seats = seats;
+        }
+
+
+        Event.prototype.checkAvailability = function() {
+            return this.seats > 0 ? "Available" : "Full";
+        };
+
+        const e1 = new Event("Tech Meetup", "New York", 10);
+        const e2 = new Event("AI Conference", "Chicago", 0);
+
+        let output = "";
+
+  
+        Object.entries(e1).forEach(([key, value]) => {
+            output += `${key}: ${value}<br>`;
+        });
+
+        output += "Availability: " + e1.checkAvailability() + "<br>";
+        output += "Availability: " + e2.checkAvailability() + "<br>";
+
+        document.getElementById('output').innerHTML = output;
+    </script>
+
+</body>
+</html>

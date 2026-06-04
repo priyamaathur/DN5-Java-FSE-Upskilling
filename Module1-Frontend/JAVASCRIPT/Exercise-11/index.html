@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+
+    <h2>Event Registration Form</h2>
+
+    <form id="regForm">
+        <label>Name:</label><br>
+        <input type="text" name="name" placeholder="Your name"><br>
+        <span id="nameError" style="color:red;"></span><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" placeholder="Your email"><br>
+        <span id="emailError" style="color:red;"></span><br>
+
+        <label>Select Event:</label><br>
+        <select name="event">
+            <option value="">-- Select --</option>
+            <option value="tech">Tech Meetup</option>
+            <option value="music">Music Festival</option>
+        </select><br>
+        <span id="eventError" style="color:red;"></span><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p id="successMsg" style="color:green;"></p>
+
+    <script>
+        document.getElementById('regForm').addEventListener('submit', function(e) {
+            // Prevent default form submission
+            e.preventDefault();
+
+            const name = this.elements['name'].value;
+            const email = this.elements['email'].value;
+            const event = this.elements['event'].value;
+
+            let valid = true;
+
+            // Validate name
+            if (!name) {
+                document.getElementById('nameError').textContent = "Name is required";
+                valid = false;
+            } else {
+                document.getElementById('nameError').textContent = "";
+            }
+
+            // Validate email
+            if (!email) {
+                document.getElementById('emailError').textContent = "Email is required";
+                valid = false;
+            } else {
+                document.getElementById('emailError').textContent = "";
+            }
+
+            // Validate event
+            if (!event) {
+                document.getElementById('eventError').textContent = "Please select an event";
+                valid = false;
+            } else {
+                document.getElementById('eventError').textContent = "";
+            }
+
+            if (valid) {
+                document.getElementById('successMsg').textContent =
+                    `${name} successfully registered for ${event}!`;
+            }
+        });
+    </script>
+
+</body>
+</html>

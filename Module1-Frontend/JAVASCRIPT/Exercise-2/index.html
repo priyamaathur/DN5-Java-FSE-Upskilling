@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2 - Data Types</title>
+</head>
+<body>
+
+    <h2>Data Types and Operators</h2>
+    <p id="output"></p>
+
+    <script>
+        // const for fixed values
+        const eventName = "Tech Meetup";
+        const eventDate = "June 10, 2025";
+
+        // let for changing values
+        let seats = 100;
+
+        // Template literal
+        let info = `Event: ${eventName} | Date: ${eventDate} | Seats: ${seats}`;
+        document.getElementById('output').textContent = info;
+
+        // ++ to manage seat count on registration
+        seats--;
+        console.log("Seats after registration: " + seats);
+    </script>
+
+</body>
+</html>

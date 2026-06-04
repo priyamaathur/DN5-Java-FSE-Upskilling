@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6+ Features</title>
+</head>
+<body>
+
+    <h2>Modern JS Features</h2>
+    <div id="output"></div>
+
+    <script>
+        
+        const portalName = "Community Portal";
+        let totalEvents = 5;
+
+     
+        function greet(name = "Guest") {
+            return `Welcome to ${portalName}, ${name}!`;
+        }
+
+    
+        const event = { name: "Tech Meetup", city: "New York", seats: 10 };
+        const { name, city, seats } = event;
+
+        // Spread operator - clone before filtering
+        const events = ["Tech Meetup", "Music Festival", "Food Fair"];
+        const cloned = [...events];
+        const filtered = cloned.filter(e => e !== "Food Fair");
+
+        // Template literals
+        let output = "";
+        output += greet("Alice") + "<br>";
+        output += `Event: ${name} | City: ${city} | Seats: ${seats}<br>`;
+        output += "Filtered: " + filtered.join(", ");
+
+        document.getElementById('output').innerHTML = output;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Handling</title>
+</head>
+<body>
+
+    <h2>Event Handling</h2>
+
+
+    <button onclick="register()">Register</button>
+    <p id="registerMsg"></p>
+
+    <label>Filter by Category:</label>
+    <select onchange="filterEvents(this.value)">
+        <option value="all">All</option>
+        <option value="tech">Tech</option>
+        <option value="music">Music</option>
+    </select>
+    <div id="filteredEvents"></div>
+
+    <br>
+    <input type="text" placeholder="Search events..." onkeydown="searchEvent(this.value)">
+    <p id="searchResult"></p>
+
+    <script>
+
+        function register() {
+            document.getElementById('registerMsg').textContent = "Registered successfully!";
+        }
+
+        const events = ["Tech Meetup", "Music Festival", "AI Conference", "Food Fair"];
+
+  
+        function filterEvents(category) {
+            let filtered = category === "all" ? events :
+                events.filter(e => e.toLowerCase().includes(category));
+            document.getElementById('filteredEvents').innerHTML =
+                filtered.map(e => `<p>${e}</p>`).join('');
+        }
+
+
+        function searchEvent(query) {
+            const result = events.filter(e =>
+                e.toLowerCase().includes(query.toLowerCase()));
+            document.getElementById('searchResult').textContent =
+                result.length ? result.join(", ") : "No events found";
+        }
+    </script>
+
+</body>
+</html>

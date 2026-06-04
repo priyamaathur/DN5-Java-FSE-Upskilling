@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h2>Arrays and Methods</h2>
+    <div id="output"></div>
+
+    <script>
+        let events = [
+            { name: "Tech Meetup", category: "tech" },
+            { name: "Music Festival", category: "music" },
+            { name: "Food Fair", category: "food" }
+        ];
+
+        // push - add new event
+        events.push({ name: "Baking Workshop", category: "food" });
+
+        // filter - only music events
+        const musicEvents = events.filter(e => e.category === "music");
+
+        // map - format display cards
+        const displayCards = events.map(e => `Workshop on ${e.name}`);
+
+        let output = "";
+        output += "<b>All Events:</b><br>";
+        events.forEach(e => output += e.name + "<br>");
+
+        output += "<br><b>Music Events:</b><br>";
+        musicEvents.forEach(e => output += e.name + "<br>");
+
+        output += "<br><b>Display Cards:</b><br>";
+        displayCards.forEach(c => output += c + "<br>");
+
+        document.getElementById('output').innerHTML = output;
+    </script>
+
+</body>
+</html>

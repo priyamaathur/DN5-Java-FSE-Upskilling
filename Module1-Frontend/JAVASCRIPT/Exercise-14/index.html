@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h2>Exercise 14 - jQuery</h2>
+
+    <button id="registerBtn">Register</button>
+    <button id="toggleBtn">Toggle Events</button>
+
+    <div id="eventCards">
+        <div class="card" style="border:1px solid #003366; padding:10px; margin:8px 0;">
+            Tech Meetup - New York
+        </div>
+        <div class="card" style="border:1px solid #003366; padding:10px; margin:8px 0;">
+            AI Conference - Chicago
+        </div>
+        <div class="card" style="border:1px solid #003366; padding:10px; margin:8px 0;">
+            Frontend Bootcamp - Los Angeles
+        </div>
+    </div>
+
+    <p id="msg"></p>
+
+    <script>
+        // jQuery click handler
+        $('#registerBtn').click(function() {
+            $('#msg').text("Registered successfully using jQuery!");
+        });
+
+        // fadeIn and fadeOut on event cards
+        let visible = true;
+        $('#toggleBtn').click(function() {
+            if (visible) {
+                $('.card').fadeOut();
+            } else {
+                $('.card').fadeIn();
+            }
+            visible = !visible;
+        });
+
+    
+    </script>
+
+</body>
+</html>

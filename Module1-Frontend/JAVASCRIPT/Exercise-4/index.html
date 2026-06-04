@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions and Closures</title>
+</head>
+<body>
+
+    <h2>Exercise 4 - Functions, Closures, Higher-Order Functions</h2>
+    <div id="output"></div>
+
+    <script>
+        // Basic functions
+        function addEvent(name, category) {
+            return { name, category };
+        }
+
+        function registerUser(user, event) {
+            return `${user} registered for ${event.name}`;
+        }
+
+        function filterEventsByCategory(events, category) {
+            return events.filter(e => e.category === category);
+        }
+
+        function categoryCounter() {
+            let count = 0;
+            return function() {
+                count++;
+                return count;
+            };
+        }
+
+        const techCount = categoryCounter();
+
+        const events = [
+            addEvent("Tech Meetup", "tech"),
+            addEvent("Music Festival", "music"),
+            addEvent("AI Conference", "tech")
+        ];
+
+        const techEvents = filterEventsByCategory(events, "tech");
+
+        let output = "";
+        output += registerUser("Alice", events[0]) + "<br>";
+        output += "Tech registrations: " + techCount() + "<br>";
+        output += "Tech registrations: " + techCount() + "<br>";
+        output += "Tech events: " + techEvents.map(e => e.name).join(", ");
+
+        document.getElementById('output').innerHTML = output;
+    </script>
+
+</body>
+</html>

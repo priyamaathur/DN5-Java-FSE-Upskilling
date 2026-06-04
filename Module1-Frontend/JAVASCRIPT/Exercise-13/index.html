@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging</title>
+</head>
+<body>
+
+    <h2>Debugging</h2>
+    <button onclick="submitForm()">Submit Registration</button>
+    <p id="result"></p>
+
+    <script>
+        async function submitForm() {
+            // Step 1 - log form submission
+            console.log("Form submission started");
+
+            const data = { name: "Alice", event: "Tech Meetup" };
+            console.log("Payload:", data);
+
+            try {
+                // Step 2 - fetch request (check in Network tab)
+                const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                // Step 3 - log response
+                console.log("Response status:", res.status);
+                const result = await res.json();
+                console.log("Response data:", result);
+
+                document.getElementById('result').textContent = "Success!";
+
+            } catch (err) {
+                // Step 4 - catch error
+                console.error("Error during submission:", err);
+                document.getElementById('result').textContent = "Failed!";
+            }
+        }
+    </script>
+
+</body>
+</html>
